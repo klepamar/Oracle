@@ -17,3 +17,16 @@ then
 else
 	echo "Error occured during downloading..."
 fi
+
+FILENAME=$(basename "$1")
+FILENAME_MODIFIED=$(echo ${FILENAME%.gz})
+
+echo "Gunzipping $FILENAME..."
+gunzip /sgd/$FILENAME
+
+echo "Installing $FILENAME_MODIFIED..."
+pkgadd -d /sgd/$FILENAME_MODIFIED
+
+echo "Installation successful, starting tarantella..."
+/opt/tarantella/bin/tarantella start
+

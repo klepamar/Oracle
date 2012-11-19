@@ -43,5 +43,3 @@ done
 
 # remote a specific package such as 'tta' (including configuration)
 # tarantella uninstall tta --purge
-
-
