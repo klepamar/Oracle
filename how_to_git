@@ -1,3 +1,5 @@
+0.) Clone already existing git repository:
+    https://github.com/klepamar/Oracle.git
 1.) Make your change.
 2.) git add - this stages your changes for committing
 3.) git commit - this commits your staged changes locally
