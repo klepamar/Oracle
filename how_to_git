@@ -1,0 +1,4 @@
+1.) Make your change.
+2.) git add - this stages your changes for committing
+3.) git commit - this commits your staged changes locally
+4.) git push - this pushes your committed changes to a remote
