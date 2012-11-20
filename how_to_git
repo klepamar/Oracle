@@ -1,10 +1,23 @@
-0.) Clone already existing git repository:
-    git clone https://github.com/klepamar/Oracle.git
+#Clone already existing git repository:
+#git clone https://github.com/klepamar/Oracle.git
+
+
+0.) Generate public key & let github allow it. 
+# ssh-keygen -t rsa 
+# copy /root/.ssh/id_rsa.pub to GitHub
+# verify by ssh -T git@github.com
+# git config remote.origin.url git@github.com:klepamar/Oracle.git
+
 1.) Make your change.
 2.) git add - this stages your changes for committing
 3.) git commit - this commits your staged changes locally
 4.) git push - this pushes your committed changes to a remote
 
+# how you will be viewed in commits
 git config --global user.name "klepamar"
 git config --global user.email "klepamar@gmail.com"
+
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600'
+
 # git pull -> if other users are changing your repo
